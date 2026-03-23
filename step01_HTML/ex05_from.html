@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 테스트</title>
+  </head>
+  <body>
+    <h1>form 요소 알아보기</h1>
+    <form action="ex01_start.html" method="get">
+      <label for="userId"></label>아이디</label>
+      <input type="text" name="id" id="userId" value="hong" /> <br />
+      비번 <input type="password" name="pwd" id="pwd" /> <br />
+      이름 <input type="text" name="name" id="name" maxlength="5"/> <br /><br>
+      <fieldset>
+        <legend>취미 선택</legend>
+        <!-- checkbox는 name이 같아도 달라도 상관없다. 단, 같으면 하나의 이름으로 배열로 다룰 수 있다. 보통 같은 이름을 많이한다. -->
+        <input type="checkbox" name="hobby" id="hobby" value="A">축구
+        <input type="checkbox" name="hobby" id="hobby" value="B" checked>게임
+        <input type="checkbox" name="hobby" id="hobby" value="C" checked>헬스
+        <input type="checkbox" name="hobby" id="hobby" value="D">F1
+      </fieldset>
+      
+      <fieldset>
+        <legend>성별 선택</legend>
+        <!-- radio는 단일선택, 그 기준은 name이 동일한 그룹내에서 단일 선택 -->
+        <input type="radio" name="gender" value="man" checked>남자
+        <input type="radio" name="gender" value="woman">여자
+      </fieldset>
+      <br>
+      <textarea name="content" cols="20" rows="5"></textarea><br><br>
+
+      <select name ="job" id="job" size="3" multiple>
+        <option value="">선택하세요</option>
+        <option value="student">디자이너</option>
+        <option value="teacher">기획자</option>
+        <option value="developer" selected>개발자</option>
+        <option value="developer">엔지니어</option>
+        <option value="developer">QA</option>
+        </select>
+        <br>
+
+        <!-- button 태그는 폼 요소안에 있으면 기본이 submit이고, 폼요소 밖에 있으면 기본이 button -->
+        <button>클릭</button>
+
+        <button type="button">버튼</button>
+        <button type="reset">초기화</button>
+        <button type="submit">전송</button>
+    </form>
+
+    <button>폼 밖 버튼</button>    
+  </body>
+</html>

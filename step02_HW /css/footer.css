@@ -1,0 +1,14 @@
+footer {
+  background-color: rgb(206, 249, 249);
+  text-align: end;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+}
+
+footer li {
+  padding: 5px;
+}

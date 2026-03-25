@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* body,
+      html {
+        height: 100%;
+      } */
+
+      .outer {
+        /* width: 50%;
+        height: 50%; 부모노드의 50% / 부모는 body , html 이므로 크기 지정해야함 */
+        background-color: skyblue;
+        width: 50vw;
+        height: 50vh; /* 보여주는 크기 안에서의 비율 적용 */
+        font-size: 32px;
+      }
+
+      .a {
+        background-color: red;
+        font-size: 1em;
+      }
+      .b {
+        background-color: green;
+        font-size: 1rem;
+      }
+      .c {
+        background-color: blue;
+        font-size: 0.5em;
+      }
+
+      @font-face {
+        font-family: myFont;
+        src: url("./font/BitcountGridDoubleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf");
+      }
+
+      /* 글꼴 적용 */
+      * {
+        font-family: myFont, 궁서체;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 단위 : px vs em vs rem -->
+    <div class="outer">
+      단위 : px vs em vs rem
+      <div class="a">em : 부모노드를 기준으로..</div>
+      <div class="b">rem :root노드를 기준으로..</div>
+      <div class="c">px : 해상도를 기준으로..</div>
+    </div>
+  </body>
+</html>

@@ -58,6 +58,44 @@
       function test() {
         alert("test() 호출됨 ....2");
       }
+
+      /////////////////////////////////////////
+      //자바스크립트에서 변수의 scope에 대해 알아보자
+      document.write("<h1>변수의 scope에 대해 알아보자!");
+      var i = 10;
+      function test2() {
+        var i = 5; //지역변수
+        var j = 20; //지역변수
+        k = 50; //함수 안에서 선언되는 변수에 var를 생략하면 전역변수
+        console.log("i= " + i);
+        console.log("this.i= " + this.i);
+        console.log("j= " + j);
+        console.log("k= " + k);
+      }
+
+      function test3() {
+        console.log("i= " + i);
+        console.log("this.i= " + this.i);
+        //console.log("j= " + j);
+        console.log("k= " + k);
+
+        //자바스크립트의 변수의 scope은 선언돤 위치의 함수 단위
+        //{} 블록단위가 아니다.
+        console.log("전 : index = " + index);
+
+        for (var index = 0; index <= 10; index++) {}
+
+        console.log("전 : nickName = " + nickName);
+        {
+          var nickName = "희정";
+        }
+
+        console.log("후 : index = " + index);
+        console.log("후 : nickName = " + nickName);
+      }
+
+      test2(); //함수 호출
+      test3();
     </script>
   </body>
 </html>

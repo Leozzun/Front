@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      table {
+        width: 80vw;
+        height: 50vh;
+        border: 2px solid red;
+        border-collapse: collapse;
+        margin: auto;
+      }
+
+      tr,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        color: black;
+      }
+
+      #dan {
+        background-color: pink;
+        color: white;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>구구단</h2>
+    <table>
+      <script>
+        let a = "";
+
+        for (let j = 2; j < 10; j++) {
+          a += `<td id="dan">${j}단</td>`;
+        }
+
+        for (let i = 1; i < 10; i++) {
+          a += "<tr>";
+          for (let j = 2; j < 10; j++) {
+            a += `<td>${j} * ${i} = ${j * i}</td>`;
+          }
+          a += "</tr>";
+        }
+
+        document.querySelector("table").innerHTML += a;
+      </script>
+    </table>
+  </body>
+</html>

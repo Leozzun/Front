@@ -13,8 +13,11 @@ function Ex03_Object() {
     console.log(e.target.value);
     console.log(e.target.name);
 
+    const { name, value } = e.target;
+
     //setProfile(e.target.value);
-    setProfile({ ...profile, [e.target.name]: e.target.value });
+    setProfile({ ...profile, [name]: value });
+    console.log(profile);
   };
 
   return (

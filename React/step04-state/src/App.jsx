@@ -2,6 +2,7 @@ import "./App.css";
 import Ex01_Count from "./components/Ex01_Count";
 import Ex02_Form from "./components/Ex02_Form";
 import Ex03_Object from "./components/Ex03_Object";
+import Ex04_ConditionRendering from "./components/Ex04_ConditionRendering";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       {/* <Ex02_Form /> */}
 
       {/* 3. Form 요소 state object로 관리하기 */}
-      <Ex03_Object />
+      {/* <Ex03_Object /> */}
+
+      <Ex04_ConditionRendering />
     </>
   );
 }

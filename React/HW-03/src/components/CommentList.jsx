@@ -18,8 +18,11 @@ function CommentList() {
   ];
 
   return (
+    //  {comments.map((com, index) => {  수정 전
+    //     return <Comment name={com.name} text={com.comment} />;
+
     <div>
-      {comments.map((com, index) => {
+      {comments.map((com) => {
         return <Comment name={com.name} text={com.comment} key={com.name} />;
       })}
     </div>

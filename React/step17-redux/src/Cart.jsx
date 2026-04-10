@@ -1,11 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { sortByName, addCount } from "./redux/store.js";
 
 const Cart = () => {
-  let state = useSelector((state) => state);
+  //   let state = useSelector((state) => state);
+  let state = useSelector((state) => {
+    return state.cart;
+  }, shallowEqual);
 
   console.log(state.count);
-  console.log(state.cart[0].name);
+  console.log(state.name);
 
   // dispatch는 store.js 로 요청보내주는 함수
   let dispatch = useDispatch();
@@ -22,7 +25,7 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          {state.cart.map((item, i) => (
+          {state.map((item, i) => (
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.name}</td>
@@ -35,7 +38,6 @@ const Cart = () => {
         </tbody>
       </table>
       <br />
-      8253jang@daum.net 장희정 페이지 13 / 20
       <button onClick={() => dispatch(sortByName())}>이름순정렬</button>{" "}
     </div>
   );

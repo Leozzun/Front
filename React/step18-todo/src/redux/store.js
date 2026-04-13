@@ -15,12 +15,15 @@ const todoSlice = createSlice({
   reducers: {
     //추가하기
     addItem(state, action) {
-      state.push(action.payload);
+      state.push(action.payload); //끝에 추가
+      // state.unshift(action.payload); //앞에 추가
     },
 
     //삭제하기
     deleteItem(state, action) {
       return state.filter((todo) => todo.id !== action.payload);
+      // const index = action.payload; //id의 값이 전달
+      // state.splice(index, 1); // 두 번째 인자 1은 삭제할 요소의 개수
     },
 
     //수정하기 (체크박스)

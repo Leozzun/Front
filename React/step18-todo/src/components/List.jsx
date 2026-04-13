@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 import TodoItem from "./TodoItem";
 import "./List.css";
 // import { TodoStateContext } from "../App";
@@ -10,7 +10,7 @@ const List = () => {
 
   const todos = useSelector((state) => {
     return state.todo;
-  });
+  }, shallowEqual);
 
   // const todos = useContext(TodoStateContext);
 

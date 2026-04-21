@@ -1,3 +1,4 @@
+import A24StyleBookstore from "./A24StyleBookstore";
 import "./App.css";
 import Archive from "./Archive";
 import ChronoLight from "./ChronoLight";
@@ -37,7 +38,8 @@ function App() {
 
       {/* <InCommonStore /> */}
       {/* <InCommonBookstore /> */}
-      <PoeticArchive />
+      {/* <PoeticArchive /> */}
+      <A24StyleBookstore />
     </>
   );
 }
